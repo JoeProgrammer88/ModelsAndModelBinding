@@ -1,4 +1,26 @@
-﻿@{
+﻿@model Product
+@{
     // Give title to the webpage on the layout page
     ViewData["Title"] = "Create Product";
 }
+
+<h2>Create a new product</h2>
+
+<form method="post">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span>
+    <br />
+
+    <label asp-for="Price"></label>
+    <input asp-for="Price" />
+    <span asp-validation-for="Price"></span>
+    <br />
+
+    <label asp-for="StartSalesDate"></label>
+    <input asp-for="StartSalesDate" />
+    <span asp-validation-for="StartSalesDate"></span>
+    <br />
+
+    <input type="submit" value="Create Product" />
+</form>
